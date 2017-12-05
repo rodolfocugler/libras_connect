@@ -1,6 +1,6 @@
-#LIBRAS CONNECT
+# LIBRAS CONNECT
 
-##RECONHECIMENTO DE LIBRAS COM CNTK E REALSENSE
+## RECONHECIMENTO DE LIBRAS COM CNTK E REALSENSE
 
 Este projeto foi desenvolvido como TCC do curso de engenharia da computação dos alunos Felipe da Silva Pereira e Rodolfo Luiz Cugler Pereira no ano de 2017 na Faculdade de Engenharia de Sorocaba.
 
@@ -10,7 +10,7 @@ A ideia do projeto é fazer o reconhecimento de linguagem brasileira de sinais (
 
 A documentação da câmera da Intel pode ser encontada em https://software.intel.com/sites/landingpage/realsense/camera-sdk/v2016r3/documentation/html/index.html?doc_hand_accessing_hand_posture_and_sid.html
 
-##Para rodar o projeto
+## Para rodar o projeto
 É possível encontrar os dados capturados por nós na pasta Documents/banco de dados/ e é necessário importar esses dados para um banco de dados MongoDB.
 
 mongoimport --db libras_connect --collection Signal --file Signal.json
