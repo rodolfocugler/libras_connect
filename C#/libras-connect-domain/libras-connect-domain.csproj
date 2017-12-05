@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{230C0E4B-DA54-4E42-95F8-D8CF7D3DA1B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>libras_connect_domain</RootNamespace>
+    <AssemblyName>libras-connect-domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cntk.Core.Managed-2.2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=21fff2ec8197defe, processorArchitecture=AMD64">
+      <HintPath>..\packages\CNTK.CPUOnly.2.2.0\lib\net45\x64\Cntk.Core.Managed-2.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="libpxcclr.cs">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Intel\RSSDK\bin\x64\libpxcclr.cs.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.4.4\lib\net45\MongoDB.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.4.4\lib\net45\MongoDB.Driver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.4.4\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.105.2, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.105.2\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builder\CntkDataBuilder.cs" />
+    <Compile Include="DTO\IObserver.cs" />
+    <Compile Include="DTO\Subject.cs" />
+    <Compile Include="Enums\BodySideEnum.cs" />
+    <Compile Include="Enums\CameraEnum.cs" />
+    <Compile Include="Enums\ControlTypeEnum.cs" />
+    <Compile Include="Handler\ExceptionHandler.cs" />
+    <Compile Include="Models\DataSocket.cs" />
+    <Compile Include="Enums\ExtremityTypeEnum.cs" />
+    <Compile Include="Enums\FingerTypeEnum.cs" />
+    <Compile Include="Enums\HandEnum.cs" />
+    <Compile Include="Enums\HandTrackingStatusEnum.cs" />
+    <Compile Include="Enums\JointEnum.cs" />
+    <Compile Include="Enums\RealsenseTypeEnum.cs" />
+    <Compile Include="Exceptions\CalibrateException.cs" />
+    <Compile Include="Exceptions\RepositoryException.cs" />
+    <Compile Include="Exceptions\ServiceException.cs" />
+    <Compile Include="Exceptions\ValidationException.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\BoundingBox.cs" />
+    <Compile Include="Models\ExtremityPoint.cs" />
+    <Compile Include="Models\ExtremityPointImage.cs" />
+    <Compile Include="Models\ExtremityPointWorld.cs" />
+    <Compile Include="Models\FingerData.cs" />
+    <Compile Include="Models\HandData.cs" />
+    <Compile Include="Models\JointData.cs" />
+    <Compile Include="Models\JointGlobalOrientation.cs" />
+    <Compile Include="Models\JointLocalRotation.cs" />
+    <Compile Include="Models\JointPositionImage.cs" />
+    <Compile Include="Models\JointPositionWorld.cs" />
+    <Compile Include="Models\JointSpeed.cs" />
+    <Compile Include="Models\MassCenterImage.cs" />
+    <Compile Include="Models\MassCenterWorld.cs" />
+    <Compile Include="Models\PalmOrientation.cs" />
+    <Compile Include="Models\Point3DF32.cs" />
+    <Compile Include="Models\Point4DF32.cs" />
+    <Compile Include="Models\PointF32.cs" />
+    <Compile Include="Models\RectF32.cs" />
+    <Compile Include="Models\Setting.cs" />
+    <Compile Include="Models\Signal.cs" />
+    <Compile Include="Models\WordDNN.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Implements\Mongo\BaseRepository.cs" />
+    <Compile Include="Repository\Implements\Mongo\CrudRepository.cs" />
+    <Compile Include="Repository\Implements\Mongo\MongoConnection.cs" />
+    <Compile Include="Repository\Implements\Mongo\SignalRepository.cs" />
+    <Compile Include="Repository\Implements\Mongo\WordDNNRepository.cs" />
+    <Compile Include="Repository\Implements\SQLite\BaseRepository.cs" />
+    <Compile Include="Repository\Implements\SQLite\SettingRepository.cs" />
+    <Compile Include="Repository\Interfaces\ICntkTestRepository.cs" />
+    <Compile Include="Repository\Interfaces\ISettingRepository.cs" />
+    <Compile Include="Repository\Interfaces\ISignalRepository.cs" />
+    <Compile Include="Repository\Interfaces\IWordDNNRepository.cs" />
+    <Compile Include="Serialize\JointDataSerializer.cs" />
+    <Compile Include="Services\Implements\BaseRealsesenseService.cs" />
+    <Compile Include="Services\Implements\CntkService.cs" />
+    <Compile Include="Services\Implements\DataService.cs" />
+    <Compile Include="Services\Implements\FingerDataService.cs" />
+    <Compile Include="Services\Implements\HandDataService.cs" />
+    <Compile Include="Services\Implements\JointDataService.cs" />
+    <Compile Include="Services\Implements\RealsenseAlertService.cs" />
+    <Compile Include="Services\Implements\RealsenseDataService.cs" />
+    <Compile Include="Services\Implements\RealsenseImageService.cs" />
+    <Compile Include="Services\Implements\RealsenseTestService.cs" />
+    <Compile Include="Services\Implements\SettingService.cs" />
+    <Compile Include="Services\Implements\VoiceService.cs" />
+    <Compile Include="Services\Interfaces\ICntkService.cs" />
+    <Compile Include="Services\Interfaces\IDataService.cs" />
+    <Compile Include="Services\Interfaces\IFingerDataService.cs" />
+    <Compile Include="Services\Interfaces\IHandDataService.cs" />
+    <Compile Include="Services\Interfaces\IJointDataService.cs" />
+    <Compile Include="Services\Interfaces\IRealsenseAlertService.cs" />
+    <Compile Include="Services\Interfaces\IRealsenseService.cs" />
+    <Compile Include="Services\Implements\Net\ISocketCallback.cs" />
+    <Compile Include="Services\Implements\Net\SocketClient.cs" />
+    <Compile Include="Services\Implements\Net\SocketServer.cs" />
+    <Compile Include="Services\Interfaces\ISettingService.cs" />
+    <Compile Include="Services\Interfaces\IVoiceService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libras-connect-infrastructure\libras-connect-infrastructure.csproj">
+      <Project>{2266461d-b3ab-4570-824a-e316ff9f4229}</Project>
+      <Name>libras-connect-infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.2\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.2\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.105.2\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.105.2\build\net451\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\CNTK.CPUOnly.2.2.0\build\net45\CNTK.CPUOnly.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CNTK.CPUOnly.2.2.0\build\net45\CNTK.CPUOnly.targets'))" />
+  </Target>
+  <Import Project="..\packages\CNTK.CPUOnly.2.2.0\build\net45\CNTK.CPUOnly.targets" Condition="Exists('..\packages\CNTK.CPUOnly.2.2.0\build\net45\CNTK.CPUOnly.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

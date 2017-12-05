@@ -1,0 +1,14 @@
+import image_util
+
+MAX_EPOCHS = 300
+NUM_LABELS = 13
+MINIBATCH_SIZE = 30
+HAND_POINTS = 680
+IMG_HEIGHT = 32
+IMG_WIDTH = 24
+
+DATA_SIZE = (IMG_WIDTH * IMG_HEIGHT) + HAND_POINTS
+
+FILEPATH = "C:\\users\\rodol\\Documents\\Projetos\\tcc\\python"
+
+POPULATION_SIZE = 50

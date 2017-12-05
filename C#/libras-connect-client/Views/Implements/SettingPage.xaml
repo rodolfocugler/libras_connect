@@ -1,0 +1,42 @@
+﻿<Page x:Class="libras_connect_client.Views.Implements.SettingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:libras_connect_client.Views.Implements"
+      mc:Ignorable="d" 
+      d:DesignHeight="1346" d:DesignWidth="768"
+      Title="Configurações">
+
+    <DockPanel>
+        <local:MenuControl DockPanel.Dock="Top" />
+
+        <DockPanel DockPanel.Dock="Top" VerticalAlignment="Top" >
+            <GroupBox Header="Configurações de Socket" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                        <Label Content="IP Servidor" />
+                        <TextBox x:Name="tbx_server_ip"></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Vertical">
+                            <Label Content="Porta Servidor 1" />
+                            <TextBox x:Name="tbx_server_1_port"></TextBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical">
+                            <Label Content="Porta Servidor 2" />
+                            <TextBox x:Name="tbx_server_2_port"></TextBox>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                    <Button Content="Salvar" HorizontalAlignment="Right" Click="save_socket_setting"/>
+                </StackPanel>
+
+            </GroupBox>
+        </DockPanel>
+    </DockPanel>
+</Page>
